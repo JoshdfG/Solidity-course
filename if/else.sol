@@ -19,10 +19,10 @@ contract Conditions{
 } else if(x>20){
   return 4;
 } else{
-  return 0;
+  return 0; 
 }
  }
- 
+
  function loop() public pure {
 for (uint i = 0;i < 10; i++) {
   if(i == 3){
