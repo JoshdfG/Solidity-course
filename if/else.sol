@@ -23,14 +23,19 @@ contract Conditions{
 }
  }
 
- function loop() public pure {
-for (uint i = 0;i < 10; i++) {
-  if(i == 3){
-    continue;
-  }
-  if(i == 5){
-    break;
-  }
+function loop() public pure returns (string memory) {
+    for (uint i = 0; i < 10; i++) {
+        if (i == 3) {
+            continue;
+        }
+        if (i == 5) {
+            break;
+        }
+        if (i == 9) {
+            return "cycle completed";
+        }
+    }
+    return "cycle not completed";
 }
-}
+
 }
